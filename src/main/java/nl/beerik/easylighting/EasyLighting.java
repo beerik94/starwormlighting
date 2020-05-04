@@ -6,9 +6,13 @@ import org.apache.logging.log4j.Logger;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import nl.beerik.easylighting.config.ELConfig;
+import nl.beerik.easylighting.world.gen.WorldGenerator;
 
 @Mod(modid = EasyLighting.MODID, name = EasyLighting.NAME, version = EasyLighting.VERSION, acceptedMinecraftVersions = EasyLighting.MC_VERSION)
 public class EasyLighting {
@@ -22,9 +26,16 @@ public class EasyLighting {
 	
 	public static final CreativeTabs TAB = new EasyLightingTab();
 	
+	@Instance
+	public static EasyLighting INSTANCE;
+	
+	public ELConfig config;
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		//
+		config = new ELConfig(null, event.getSuggestedConfigurationFile());
+		
+		GameRegistry.registerWorldGenerator(new WorldGenerator(), 3);
 	}
 
 	@EventHandler

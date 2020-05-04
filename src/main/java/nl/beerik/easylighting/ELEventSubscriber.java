@@ -8,6 +8,7 @@ import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import nl.beerik.easylighting.block.StarWormBlock;
+import nl.beerik.easylighting.block.StarWormCobbleBlock;
 import nl.beerik.easylighting.block.StarWormVineBlock;
 import nl.beerik.easylighting.init.ELBlocks;
 import nl.beerik.easylighting.item.PestleMortarItem;
@@ -178,7 +179,7 @@ public class ELEventSubscriber {
 	@SubscribeEvent
 	public static void registerBlocks(Register<Block> event) {
 		final Block[] blocks = {
-				RegistryUtil.setBlockName(new Block(Material.ROCK), "star_worm_cobble").setCreativeTab(EasyLighting.TAB),
+				RegistryUtil.setBlockName(new StarWormCobbleBlock(), "star_worm_cobble"),
 				RegistryUtil.setBlockName(new StarWormVineBlock(), "star_worm_vine"),
 				RegistryUtil.setBlockName(new StarWormBlock(Material.ROCK), "star_worm_block_stone"),
 				RegistryUtil.setBlockName(new StarWormBlock(Material.ROCK), "star_worm_block_granite"),

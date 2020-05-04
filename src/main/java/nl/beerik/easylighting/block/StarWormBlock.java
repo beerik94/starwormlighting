@@ -9,7 +9,7 @@ public class StarWormBlock extends Block {
 	public StarWormBlock(Material materialIn) {
 		super(materialIn);
 		this.setCreativeTab(EasyLighting.TAB);
-		this.lightValue = 15;
+		this.setLightLevel(1.0F);
 	}
 
 }
