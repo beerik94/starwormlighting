@@ -1,0 +1,10 @@
+{
+	"forge_marker": 1,
+    "defaults": {
+        "model": "minecraft:white_concrete_powder"
+    },
+    "variants": {
+        "normal": [{}],
+        "inventory": [{}]
+    }
+}

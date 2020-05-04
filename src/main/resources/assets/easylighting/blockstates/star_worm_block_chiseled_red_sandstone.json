@@ -1,0 +1,10 @@
+{
+	"forge_marker": 1,
+    "defaults": {
+        "model": "minecraft:red_sandstone_chiseled"
+    },
+    "variants": {
+        "normal": [{}],
+        "inventory": [{}]
+    }
+}

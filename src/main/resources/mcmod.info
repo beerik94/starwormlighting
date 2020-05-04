@@ -1,0 +1,16 @@
+[
+{
+  "modid": "easylighting",
+  "name": "Star Worm Lighting",
+  "description": "Currently adds 144 vanilla minecraft blocks with a light level of 15",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Beerik"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

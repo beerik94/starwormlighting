@@ -1,0 +1,10 @@
+{
+	"forge_marker": 1,
+    "defaults": {
+        "model": "minecraft:purple_wool"
+    },
+    "variants": {
+        "normal": [{}],
+        "inventory": [{}]
+    }
+}

@@ -1,0 +1,10 @@
+{
+	"forge_marker": 1,
+    "defaults": {
+        "model": "minecraft:diorite_smooth"
+    },
+    "variants": {
+        "normal": [{}],
+        "inventory": [{}]
+    }
+}
