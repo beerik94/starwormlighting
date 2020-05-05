@@ -1,6 +1,0 @@
-{
-    "parent": "item/generated",
-    "textures": {
-        "layer0": "easylighting:blocks/star_worm_vine"
-    }
-}

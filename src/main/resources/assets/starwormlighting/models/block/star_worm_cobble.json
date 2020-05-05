@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "starwormlighting:blocks/star_worm_cobble"
+    }
+}
