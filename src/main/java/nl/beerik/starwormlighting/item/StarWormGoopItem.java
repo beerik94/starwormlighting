@@ -23,7 +23,7 @@ public class StarWormGoopItem extends Item {
   {
   	if (!worldIn.isRemote)
   	{
-  		
+  		//
   	}
     return EnumActionResult.PASS;
   }
