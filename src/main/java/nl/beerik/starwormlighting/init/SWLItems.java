@@ -1,13 +1,17 @@
 package nl.beerik.starwormlighting.init;
 
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.common.registry.GameRegistry.ObjectHolder;
+import net.minecraftforge.fml.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
 import nl.beerik.starwormlighting.StarWormLighting;
+import nl.beerik.starwormlighting.item.PestleMortarItem;
 
-@ObjectHolder(StarWormLighting.MODID)
-public class SWLItems {
+public final class SWLItems {
 	
-	public static final Item STAR_WORM = null;
-	public static final Item STAR_WORM_GOOP = null;
-	public static final Item PESTLE_MORTAR = null;
+	public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, StarWormLighting.MODID);
+	
+	public static final RegistryObject<Item> STAR_WORM = ITEMS.register("star_worm", () -> new Item(new Item.Properties().group(StarWormLighting.GROUP)));
+	public static final RegistryObject<Item> STAR_WORM_GOOP = ITEMS.register("star_worm_goop", () -> new Item(new Item.Properties().group(StarWormLighting.GROUP)));
+	public static final RegistryObject<Item> PESTLE_MORTAR = ITEMS.register("pestle_mortar", () -> new PestleMortarItem(new Item.Properties().maxStackSize(1).maxDamage(128).group(StarWormLighting.GROUP)));
 }

@@ -3,48 +3,47 @@ package nl.beerik.starwormlighting;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.Mod.Instance;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import nl.beerik.starwormlighting.config.ConfigHolder;
 import nl.beerik.starwormlighting.config.SWLConfig;
-import nl.beerik.starwormlighting.world.gen.WorldGenerator;
+import nl.beerik.starwormlighting.init.SWLBlocks;
+import nl.beerik.starwormlighting.init.SWLItems;
+import nl.beerik.starwormlighting.world.OreGeneration;
 
-@Mod(modid = StarWormLighting.MODID, name = StarWormLighting.NAME, version = StarWormLighting.VERSION, acceptedMinecraftVersions = StarWormLighting.MC_VERSION)
+@Mod(StarWormLighting.MODID)
 public class StarWormLighting {
 	
 	public static final String MODID = "starwormlighting";
-	public static final String NAME = "Star Worm Lighting";
-	public static final String VERSION = "@VERSION@";
-	public static final String MC_VERSION = "[1.12.2]";
 	
 	public static final Logger LOGGER = LogManager.getLogger(StarWormLighting.MODID);
 	
-	public static final CreativeTabs TAB = new StarWormLightingTab();
-	
-	@Instance
-	public static StarWormLighting INSTANCE;
+	public static final ItemGroup GROUP = new StarWormLightingItemGroup(MODID, () -> new ItemStack(SWLItems.STAR_WORM.get()));
 	
 	public SWLConfig config;
 	
-	@EventHandler
-	public void preInit(FMLPreInitializationEvent event) {
-		config = new SWLConfig(null, event.getSuggestedConfigurationFile());
+	public StarWormLighting() {
 		
-		GameRegistry.registerWorldGenerator(new WorldGenerator(), 3);
+		final ModLoadingContext modLoadingContext = ModLoadingContext.get();
+		final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+		
+		modEventBus.addListener(this::setup);
+		
+		SWLBlocks.BLOCKS.register(modEventBus);
+		SWLItems.ITEMS.register(modEventBus);
+		
+		// Register config
+		modLoadingContext.registerConfig(ModConfig.Type.CLIENT, ConfigHolder.CLIENT_SPEC);
+		modLoadingContext.registerConfig(ModConfig.Type.SERVER, ConfigHolder.SERVER_SPEC);
 	}
-
-	@EventHandler
-	public void init(FMLInitializationEvent event) {
-		//
-	}
-
-	@EventHandler
-	public void postInit(FMLPostInitializationEvent event) {
-		//
+	
+	private void setup(final FMLCommonSetupEvent event) {
+		OreGeneration.setupOreGeneration();
 	}
 }

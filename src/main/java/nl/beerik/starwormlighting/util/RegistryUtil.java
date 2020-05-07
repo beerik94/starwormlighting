@@ -1,17 +1,16 @@
 package nl.beerik.starwormlighting.util;
 
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.registries.IForgeRegistryEntry;
 import nl.beerik.starwormlighting.StarWormLighting;
 
-public class RegistryUtil {
-	public static Item setItemName(final Item item, final String name) {
-		item.setRegistryName(StarWormLighting.MODID, name).setTranslationKey(StarWormLighting.MODID + "." + name);
-		return item;
+public class RegistryUtil {	
+	public static <T extends IForgeRegistryEntry<T>> T setup(final T entry, final String name) {
+		return setup(entry, new ResourceLocation(StarWormLighting.MODID, name));
 	}
-	
-	public static Block setBlockName(final Block block, final String name) {
-		block.setRegistryName(StarWormLighting.MODID, name).setTranslationKey(StarWormLighting.MODID + "." + name);
-		return block;
+
+	public static <T extends IForgeRegistryEntry<T>> T setup(final T entry, final ResourceLocation registryName) {
+		entry.setRegistryName(registryName);
+		return entry;
 	}
 }
