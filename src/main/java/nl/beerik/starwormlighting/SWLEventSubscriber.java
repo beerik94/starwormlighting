@@ -26,7 +26,7 @@ public class SWLEventSubscriber {
 		
 		final Item[] items = {
 			RegistryUtil.setItemName(new Item(), "star_worm").setCreativeTab(StarWormLighting.TAB),
-			RegistryUtil.setItemName(new Item(), "star_worm_goop"),
+			RegistryUtil.setItemName(new Item(), "star_worm_goop").setCreativeTab(StarWormLighting.TAB),
 			RegistryUtil.setItemName(pmItem, "pestle_mortar")
 		};
 		
