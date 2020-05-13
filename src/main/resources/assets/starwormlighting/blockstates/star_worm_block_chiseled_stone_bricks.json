@@ -1,10 +1,5 @@
 {
-	"forge_marker": 1,
-    "defaults": {
-        "model": "minecraft:stonebrick_chiseled"
-    },
     "variants": {
-        "normal": [{}],
-        "inventory": [{}]
+        "": { "model": "minecraft:block/chiseled_stone_bricks" }
     }
 }

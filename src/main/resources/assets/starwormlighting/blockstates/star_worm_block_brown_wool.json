@@ -1,10 +1,5 @@
 {
-	"forge_marker": 1,
-    "defaults": {
-        "model": "minecraft:brown_wool"
-    },
     "variants": {
-        "normal": [{}],
-        "inventory": [{}]
+        "": { "model": "minecraft:block/brown_wool" }
     }
 }

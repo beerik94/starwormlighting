@@ -1,10 +1,10 @@
 {
-	"forge_marker": 1,
-    "defaults": {
-        "model": "minecraft:red_concrete_powder"
-    },
     "variants": {
-        "normal": [{}],
-        "inventory": [{}]
+        "": [
+            { "model": "minecraft:block/red_concrete_powder" },
+            { "model": "minecraft:block/red_concrete_powder", "y": 90 },
+            { "model": "minecraft:block/red_concrete_powder", "y": 180 },
+            { "model": "minecraft:block/red_concrete_powder", "y": 270 }
+        ]
     }
 }

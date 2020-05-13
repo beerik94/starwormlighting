@@ -1,10 +1,10 @@
 {
-	"forge_marker": 1,
-    "defaults": {
-        "model": "minecraft:magenta_concrete_powder"
-    },
     "variants": {
-        "normal": [{}],
-        "inventory": [{}]
+        "": [
+            { "model": "minecraft:block/magenta_concrete_powder" },
+            { "model": "minecraft:block/magenta_concrete_powder", "y": 90 },
+            { "model": "minecraft:block/magenta_concrete_powder", "y": 180 },
+            { "model": "minecraft:block/magenta_concrete_powder", "y": 270 }
+        ]
     }
 }

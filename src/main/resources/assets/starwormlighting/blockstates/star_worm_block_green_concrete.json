@@ -1,10 +1,5 @@
 {
-	"forge_marker": 1,
-    "defaults": {
-        "model": "minecraft:green_concrete"
-    },
     "variants": {
-        "normal": [{}],
-        "inventory": [{}]
+        "": { "model": "minecraft:block/green_concrete" }
     }
 }

@@ -1,10 +1,5 @@
 {
-	"forge_marker": 1,
-    "defaults": {
-        "model": "minecraft:purple_concrete"
-    },
     "variants": {
-        "normal": [{}],
-        "inventory": [{}]
+        "": { "model": "minecraft:block/purple_concrete" }
     }
 }

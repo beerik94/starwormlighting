@@ -1,10 +1,5 @@
 {
-	"forge_marker": 1,
-    "defaults": {
-        "model": "minecraft:spruce_planks"
-    },
     "variants": {
-        "normal": [{}],
-        "inventory": [{}]
+        "": { "model": "minecraft:block/spruce_planks" }
     }
 }

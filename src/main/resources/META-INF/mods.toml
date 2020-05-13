@@ -26,7 +26,7 @@ logoFile="starwormlighting.png" #optional
 # A text field displayed in the mod UI
 credits="Beerik and AlaharranHonor" #optional
 # A text field displayed in the mod UI
-authors="Beerik" #optional
+authors="Beerik and AlaharranHonor" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
 Star Worm Lighting fixes the need for torches that o so clutter your beautiful designs!
