@@ -39,7 +39,7 @@ public class StarWormLighting {
 		SWLItems.ITEMS.register(modEventBus);
 		
 		// Register config
-		modLoadingContext.registerConfig(ModConfig.Type.CLIENT, ConfigHolder.CLIENT_SPEC);
+		//modLoadingContext.registerConfig(ModConfig.Type.CLIENT, ConfigHolder.CLIENT_SPEC);
 		modLoadingContext.registerConfig(ModConfig.Type.SERVER, ConfigHolder.SERVER_SPEC);
 	}
 	
