@@ -5,8 +5,7 @@
       "item": "starwormlighting:star_worm_goop"
     },
     {
-      "item": "minecraft:stone",
-      "data": 2
+      "item": "minecraft:polished_granite"
     }
   ],
   "result": {

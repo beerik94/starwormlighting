@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "starwormlighting:items/star_worm_goop"
+        "layer0": "starwormlighting:item/star_worm_goop"
     }
 }

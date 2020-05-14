@@ -1,8 +1,8 @@
 {
     "ambientocclusion": false,
     "textures": {
-        "particle": "minecraft:blocks/vine",
-        "vine": "starwormlighting:blocks/star_worm_vine"
+        "particle": "minecraft:block/vine",
+        "vine": "starwormlighting:block/star_worm_vine"
     },
     "elements": [
         {   "from": [ 0, 0, 15.2 ],

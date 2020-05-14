@@ -1,6 +1,6 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "starwormlighting:items/pestle_mortar"
+        "layer0": "starwormlighting:item/pestle_mortar"
     }
 }

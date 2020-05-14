@@ -1,10 +1,5 @@
 {
-    "forge_marker": 1,
-    "defaults": {
-        "model": "minecraft:starwormlighting:star_worm_cobble"
-    },
     "variants": {
-        "normal": [{}],
-        "inventory": [{}]
+        "": { "model": "starwormlighting:block/star_worm_cobble" }
     }
 }
