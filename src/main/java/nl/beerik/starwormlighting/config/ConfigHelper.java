@@ -8,7 +8,13 @@ public final class ConfigHelper {
 	}
 
 	public static void bakeServer(final ModConfig config) {
-		SWLConfig.veinSize = ConfigHolder.SERVER.veinSize.get();
-		SWLConfig.veinPerChunk = ConfigHolder.SERVER.veinPerChunk.get();
+		SWLConfig.CobbleVeinSize = ConfigHolder.SERVER.cobbleVeinSize.get();
+		SWLConfig.CobbleVeinPerChunk = ConfigHolder.SERVER.cobbleVeinPerChunk.get();
+		
+		SWLConfig.AmethystVeinSize = ConfigHolder.SERVER.amethystVeinSize.get();
+		SWLConfig.AmethystVeinPerChunk = ConfigHolder.SERVER.amethystVeinPerChunk.get();
+		
+		SWLConfig.CantazariteVeinSize = ConfigHolder.SERVER.cantazariteVeinSize.get();
+		SWLConfig.CantazariteVeinPerChunk = ConfigHolder.SERVER.cantazariteVeinPerChunk.get();
 	}
 }
