@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=south": { "model": "starwormlighting:block/star_worm_cantazarite_anvil" },
+        "facing=west": { "model": "starwormlighting:block/star_worm_cantazarite_anvil", "y": 90 },
+        "facing=north": { "model": "starwormlighting:block/star_worm_cantazarite_anvil", "y": 180 },
+        "facing=east": { "model": "starwormlighting:block/star_worm_cantazarite_anvil", "y": 270 }
+    }
+}

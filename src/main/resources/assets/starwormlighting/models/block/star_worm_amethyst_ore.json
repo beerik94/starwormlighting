@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "starwormlighting:block/star_worm_amethyst_ore"
+    }
+}
