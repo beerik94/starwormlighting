@@ -44,6 +44,6 @@ public class StarWormLighting {
 	}
 	
 	private void setup(final FMLCommonSetupEvent event) {
-		OreGeneration.setupOreGeneration();
+		OreGeneration.registerOres();
 	}
 }

@@ -22,6 +22,12 @@ targetCompatibility = JavaVersion.VERSION_1_8
 compileJava.sourceCompatibility = JavaVersion.VERSION_1_8
 compileJava.targetCompatibility = JavaVersion.VERSION_1_8
 
+repositories {
+    maven {
+        url 'https://www.dogforce-games.com/maven/'
+    }
+}
+
 minecraft {
     mappings channel: 'snapshot', version: "${mcp_mappings}"
     
